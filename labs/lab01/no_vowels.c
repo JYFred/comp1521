@@ -4,19 +4,15 @@
 int check_vowel(char c);
 
 int main(void) {
-	char input[100], copy[100];
-	scanf("Please input the string here: \n", input);
-	int e = 0;
-	for(int i=0;input[i]!='\0';i++){
-		if(check_vowel(input[i])==0){
-			copy[e] = input[i];
-			e++;
+	char output[1024], c;
+	while(scanf("%c",c)){
+		if(!(check_vowel(c))){
+			strcat(output, c);
 		}
 	}
 
-	copy[e] = '\0';
-	strcpy(input, copy);
-	printf("The new string is:\n %s\n", input);
+	printf("%s",output);
+
 }
 
 int check_vowel(char c){
