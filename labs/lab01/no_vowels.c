@@ -9,7 +9,7 @@ int main(void) {
 	scanf("%c",input);
 
 	for(int i=0;i != '\0';i++){
-		if(!(check_vowel(input[i]))){
+		if(check_vowel(input[i])==0){
 			c[i] = input[i];
 		}
 	}
