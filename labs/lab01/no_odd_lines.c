@@ -4,7 +4,7 @@
 
 int main(void) {
 	char input[SIZE] = { 0 };
-	while((fgets(input, SIZE, stdin)!=EOF)){
+	while((fgets(input, SIZE, stdin)!=NULL)){
 		//input[strcspn(input, "\n")] = 0;
 		int length = strlen(input);
 		if(length%2==0){
