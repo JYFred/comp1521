@@ -14,8 +14,8 @@ int main(int argc, char **argv) {
 		for(int i = 1; i < argc; i++){
 			long arg = strtol(argv[i],NULL,10);
 			sum += arg;
-			if(argv[i] < min) min = arg;
-			if(argv[i] > max) max = arg;
+			if(arg < min) min = arg;
+			if(arg > max) max = arg;
 			mean = sum/(argc-1);
 			prod *= (int) arg;
 		}
