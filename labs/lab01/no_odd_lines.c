@@ -7,7 +7,9 @@ int main(void) {
 	fgets(input, SIZE, stdin);
 	int length = strlen(input);
 	input[strcspn(input, "\n")] = 0;
-	fputs(input, stdout);
+	if(length%2==0){
+		fputs(input, stdout);
+	}
 
 	return 0;
 }
