@@ -8,7 +8,7 @@ int main(void) {
 	char c = '0';
 	while(scanf("%c",&c)!=EOF){
 		if(!(check_vowel(c))){
-			strncat(output, c, 1);
+			strncat(output, &c, 1);
 		}
 	}
 
