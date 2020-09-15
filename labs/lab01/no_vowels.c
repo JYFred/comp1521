@@ -4,7 +4,7 @@
 int check_vowel(char c);
 
 int main(void) {
-	char output[1024];
+	char output[1024] = { 0 };
 	char c = '0';
 	while(scanf("%c",&c)!=EOF){
 		if(!(check_vowel(c))){
