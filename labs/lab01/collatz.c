@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 }
 
 void collatz(long n){
-	printf("%d\n", n);
+	printf("%ld\n", n);
 	if(n%2==0){
 		collatz(n/2);
 	}else{
