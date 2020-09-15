@@ -4,15 +4,17 @@
 int check_vowel(char c);
 
 int main(void) {
-	char output[1024] = { 0 };
-	char c = '0';
-	while(scanf("%c",&c)!=EOF){
-		if(!(check_vowel(c))){
-			strncat(output, &c, 1);
+	char input[1024] = { 0 };
+	char c[1024] = {0};
+	scanf("%c",input);
+
+	for(int i=0;i != '\0';i++){
+		if(!(check_vowel(input[i]))){
+			c[i] = input[i];
 		}
 	}
 
-	printf("%s",output);
+	printf("%s",c);
 
 }
 
