@@ -19,6 +19,11 @@ int main(int argc, char **argv) {
 			mean = sum/(argc-1);
 			prod *= (int) arg;
 		}
+		printf("MIN: %d\n",min);
+		printf("MAX: %d\n",max);
+		printf("SUM: %d\n",sum);
+		printf("PROD: %d\n",prod);
+		printf("MEAN: %d\n",mean);
 	}
 	return 0;
 }
