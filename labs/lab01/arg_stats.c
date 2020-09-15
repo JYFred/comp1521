@@ -12,11 +12,12 @@ int main(int argc, char **argv) {
 		int prod = 1;
 		int mean = 0;
 		for(int i = 1; i < argc; i++){
-			sum += (int)argv[i];
-			if(argv[i] < min) min = argv[i];
-			if(argv[i] > max) max = argv[i];
+			long arg = strtol(argv[i],NULL,10);
+			sum += arg;
+			if(argv[i] < min) min = arg;
+			if(argv[i] > max) max = arg;
 			mean = sum/(argc-1);
-			prod *= (int) argv[i];
+			prod *= (int) arg;
 		}
 	}
 	return 0;
