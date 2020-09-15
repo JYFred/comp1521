@@ -5,8 +5,8 @@
 int main(void) {
 	char input[SIZE] = { 0 };
 	fgets(input, SIZE, stdin);
-	int length = strlen(input);
 	input[strcspn(input, "\n")] = 0;
+	int length = strlen(input);
 	if(length%2==0){
 		fputs(input, stdout);
 	}
