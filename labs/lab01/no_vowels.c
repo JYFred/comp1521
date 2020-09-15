@@ -10,6 +10,7 @@ int main(void) {
 
 	for(int i=0;i != '\0';i++){
 		if(check_vowel(input[i])==0){
+			printf("assigning vlaue");
 			c[i] = input[i];
 		}
 	}
