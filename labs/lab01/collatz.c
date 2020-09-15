@@ -17,10 +17,14 @@ int main(int argc, char **argv)
 
 void collatz(long n){
 	printf("%ld\n", n);
-	if(n%2==0){
-		collatz(n/2);
+	if(n != 1){
+		if(n%2==0){
+			collatz(n/2);
+		}else{
+			long odd = (3*n) + 1;
+			collatz(odd);
+		}	
 	}else{
-		long odd = (3*n) + 1;
-		collatz(odd);
+		return;
 	}
 }
