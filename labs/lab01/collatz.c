@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long collatz(long n);
+void collatz(long n);
 
 int main(int argc, char **argv)
 {
@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	return EXIT_SUCCESS;
 }
 
-long collatz(long n){
+void collatz(long n){
 	printf("%d\n", n);
 	if(n%2==0){
 		collatz(n/2);
