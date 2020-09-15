@@ -6,11 +6,10 @@ int check_vowel(char c);
 int main(void) {
 	char input[1024] = { 0 };
 	char c[1024] = {0};
-	scanf("%c",input);
+	scanf("%s",input);
 
 	for(int i=0;i != '\0';i++){
 		if(check_vowel(input[i])==0){
-			printf("assigning vlaue");
 			c[i] = input[i];
 		}
 	}
