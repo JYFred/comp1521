@@ -5,7 +5,7 @@
 int main(void) {
 	char input[SIZE];
 	fgets(input, SIZE, stdin);
-	int i;
+	int i = 0;
 	for(i = 0; i < SIZE; i++){
 		if(input[i] == EOF) break;
 	}
