@@ -5,7 +5,7 @@ int check_vowel(char c);
 
 int main(void) {
 	char input;
-	while(scanf("%c",&input)!='\0'){
+	while(scanf("%c",&input)==1){
 		if(check_vowel(input)==0){
 			printf("%c",input);
 		}
