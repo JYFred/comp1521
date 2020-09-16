@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 unsigned int memo[47] = {[0 ... 46] = -1};
-static size_t count = 0;
 
 int fibonacci(int n);
 
@@ -13,20 +12,25 @@ int main(void)
 	memo[1] = 1;
 
 	int n =0;
+	int output = 0;
 	while(scanf("%d",&n)==1){
-		fibonacci(n);
+		output = fibonacci(n);
+		printf("%d\n", output);
 	}
 	return EXIT_SUCCESS;
 }
 
 int fibonacci(int n){
 
-	count++;
-
 	if(memo[n] == -1){
-		memo[n] = fibonacci(n-1) + fibonacci(n-2); 
-		printf("%d",memo[n]);
+		if(n <= 1){
+			memo[n] = n;
+		}else{
+			memo[n] = fibonacci(n-1) + fibonacci(n-2);
+		}
 	}
+
+
 
 	return memo[n];
 
