@@ -6,11 +6,10 @@ int check_vowel(char c);
 int main(void) {
 	char input;
 	while(scanf("%c",&input)!='\0'){
-		if(check_vowel(input)){
+		if(check_vowel(input)==0){
 			printf("%c",input);
 		}
 	}
-
 }
 
 int check_vowel(char c){
