@@ -23,7 +23,17 @@ int main(int argc, char *argv[]) {
 int bcd(int bcd_value) {
 
     // PUT YOUR CODE HERE
+    int result = 0;
 
-    return 0;
+    result += bcd_value & 0x00FF;
+
+    //result +=  bcd_value & 0xFF00;
+    int finaldigit = bcd_value & 0xFF00;
+    finaldigit = finaldigit >> 8;
+    finaldigit *= 10;
+    result += finaldigit;
+
+
+    return result;
 }
 
