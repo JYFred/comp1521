@@ -32,13 +32,11 @@ uint32_t packed_bcd(uint32_t packed_bcd_value) {
         //increase buffer by 4 bytes for every new nibble
         uint32_t base = (N_BCD_DIGITS*2)-1;
         uint32_t mask  = base << buffer;
-        uint32_t curr = (packed_bcd_value & mask);
-        curr = curr >> buffer;
-        result = curr*baseTenLevel;
+        uint32_t curr = (packed_bcd_value & mask) >> buffer;
+        result += curr*baseTenLevel;
         //10 = 0001 0000 = 1 + 0
         //22 = 2 + 2  =0010 0010
         baseTenLevel*=10;
-
     }
 
     return result;
