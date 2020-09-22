@@ -34,8 +34,7 @@ int16_t sixteen_in(char *bits) {
     for(int i=0;i<N_BITS;i++){
         int curr = 0;
         if(bits[i] == 1) curr = 1;
-        int buffer = N_BITS - i - 1;
-        curr = curr << buffer;
+        curr = curr << (N_BITS - i - 1);
         output = output | curr;
     }
 
