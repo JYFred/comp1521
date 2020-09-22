@@ -34,6 +34,27 @@ int main(int argc, char *argv[]) {
 char *sixteen_out(int16_t value) {
 
     // PUT YOUR CODE HERE
+    char *bits = malloc(sizeof(char)*17); //NBITS + the null terminator
+    bits[N_BITS] = '\0';
+
+    for(int i=0;i<N_BITS;i++){
+        int buffer = N_BITS - i - 1;
+        int temp = 1 << buffer;
+        //temp = 1100 0000 0000 0000 when i = 1
+        int curr = (value & temp) >> buffer;
+        //value = 1111 1111 1111 1111 
+        //temp  = 1100 0000 0000 0000 when i = 1
+        // ------  & --------
+        //curr  = 1100 0000 0000 0000 when i = 1
+        //bits[1] = 1 
+        if(curr == 1){ 
+            bits[i] = 1;
+        } else {
+            bits[i] = 0;
+        }
+    }
+
+    return bits;
 
 }
 
