@@ -48,9 +48,9 @@ char *sixteen_out(int16_t value) {
         //curr  = 1100 0000 0000 0000 when i = 1
         //bits[1] = 1 
         if(curr == 1){ 
-            bits[i] = 1;
+            bits[i] = '1';
         } else {
-            bits[i] = 0;
+            bits[i] = '0';
         }
     }
 
